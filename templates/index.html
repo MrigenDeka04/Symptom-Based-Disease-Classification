@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Disease Prediction GUI</h1>
+
+    <div id="greeting">
+        <h2>Hello!</h2>
+        <p>Welcome to the Disease Prediction application.</p>
+    </div>
+
+    <div id="quote">
+        <h3>Quote of the Day:</h3>
+        <p id="random-quote">Loading quote...</p>
+    </div>
+
+    <form id="symptom-form">
+        <h3>Select your symptoms:</h3>
+        <div id="symptom-checkboxes">
+            <!-- Symptom checkboxes will be loaded here by JavaScript -->
+            <p>Loading symptoms...</p>
+        </div>
+        <button type="submit">Predict Disease</button>
+    </form>
+
+    <div id="results">
+        <h3>Prediction Results:</h3>
+        <p id="predicted-disease">Predicted Disease: </p>
+        <p id="confidence-level">Confidence Level: </p>
+        <p id="precautions">Precautions: </p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
